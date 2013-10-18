@@ -13,7 +13,7 @@ _find_gemfile()
 
 _rake_tasks()
 {
-  echo $(rake -T --all 2>/dev/null|grep -e '^rake'|awk {'print $2'}|sed 's/:/\:/g')
+  echo $(rake -T 2>/dev/null|grep -e '^rake'|awk {'print $2'}|sed 's/:/\:/g')
 }
 
 _rake()
